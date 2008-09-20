@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class HaroldViewController;
-
 @interface HaroldAppDelegate : NSObject <UIApplicationDelegate> {
-	IBOutlet UIWindow *window;
-	IBOutlet HaroldViewController *viewController;
+	UIWindow *window;
+	UIViewController *viewController;
 }
 
-@property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) HaroldViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) UIViewController *viewController;
 
 @end
 

@@ -7,7 +7,6 @@
 //
 
 #import "HaroldAppDelegate.h"
-#import "HaroldViewController.h"
 
 @implementation HaroldAppDelegate
 
@@ -17,8 +16,12 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	
 	
-	// Override point for customization after app launch	
-    [window addSubview:viewController.view];
+	UIViewController *aViewController = [[UIViewController alloc] initWithNibName:@"MonkeyView" bundle:[NSBundle mainBundle]];
+	self.viewController = aViewController;
+	[aViewController release];
+
+	UIView *controllersView = [viewController view];
+    [window addSubview:controllersView];
 	[window makeKeyAndVisible];
 }
 
