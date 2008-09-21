@@ -38,6 +38,26 @@
 	[self addSubview:placardView];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+	UITouch *touch = [touches anyObject];
+	if ([touch view] != placardView) {
+		return;
+	}
+	
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+
+	UITouch *touch = [touches anyObject];
+	
+	if ([touch view] == placardView) {
+		CGPoint location = [touch locationInView:self];
+		placardView.center = location;
+		return;
+	}
+}
+	
 - (void)drawRect:(CGRect)rect {
 	// Drawing code
 }

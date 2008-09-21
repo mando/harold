@@ -17,7 +17,5 @@
 @property (nonatomic, retain) PlacardView *placardView;
 
 - (void)setUpPlacardView;
-- (void)animateFirstTouchatPoint:(CGPoint)touchPoint;
-- (void)animatePlacardViewToCenter;
 
 @end
